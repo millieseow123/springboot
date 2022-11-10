@@ -17,7 +17,7 @@ const routes: Routes = [
         path: 'home',
         component: DashboardComponent,
         data: {
-          title: 'Home',
+          title: '',
         },
       },
       {

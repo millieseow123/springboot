@@ -1,0 +1,36 @@
+<div class="fade-in">
+
+  <c-card class="mb-4">
+    <c-card-header>
+      Notepad
+    </c-card-header>
+    <c-card-body>
+      <div class="container">
+        <mat-card-title>
+          <mat-form-field floatLabel="never" appearance="fill"> <input matInput [(ngModel)]="titleModel" placeholder="Title">
+          </mat-form-field>
+        </mat-card-title>
+        <br>
+        <mat-card>
+          <mat-form-field floatLabel="never" appearance="fill"> <input matInput [(ngModel)]="todoModel" placeholder="To do">
+          </mat-form-field>
+        </mat-card>
+        <br>
+
+      </div>
+
+      <br>
+
+      <button mat-raised-button color="primary" (click)="createQuicknotes()">
+        Add Note</button>
+      &nbsp;
+      <button mat-raised-button color="basic" (click)="clear()">
+        Clear</button>
+      <hr>
+
+      <p *ngFor="let i of quicknotes">
+        <mat-card-title> {{ i.title }} </mat-card-title>
+        <mat-card> {{ i.todo }} </mat-card>
+    </c-card-body>
+  </c-card>
+</div>

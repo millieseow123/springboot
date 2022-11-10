@@ -27,32 +27,7 @@ const routes: Routes = [
       {
         path: 'todo',
         loadChildren: () =>
-          import('./views/sidebar/todo.module').then((m) => m.TodoModule)
-      },
-      {
-        path: 'base',
-        loadChildren: () =>
-          import('./views/base/base.module').then((m) => m.BaseModule)
-      },
-      {
-        path: 'buttons',
-        loadChildren: () =>
-          import('./views/buttons/buttons.module').then((m) => m.ButtonsModule)
-      },
-      {
-        path: 'forms',
-        loadChildren: () =>
-          import('./views/forms/forms.module').then((m) => m.CoreUIFormsModule)
-      },
-      {
-        path: 'icons',
-        loadChildren: () =>
-          import('./views/icons/icons.module').then((m) => m.IconsModule)
-      },
-      {
-        path: 'notifications',
-        loadChildren: () =>
-          import('./views/notifications/notifications.module').then((m) => m.NotificationsModule)
+          import('./views/sidenav/todo.module').then((m) => m.TodoModule)
       },
       {
         path: 'pages',
