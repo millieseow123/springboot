@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { DefaultLayoutComponent } from './containers';
-import { Page404Component } from './views/pages/page404/page404.component';
-import { Page500Component } from './views/pages/page500/page500.component';
-import { RegisterComponent } from './views/pages/register/register.component';
+import { Page404Component } from './views/extras/page404/page404.component';
+import { Page500Component } from './views/extras/page500/page500.component';
+import { RegisterComponent } from './views/extras/register/register.component';
 
 const routes: Routes = [
   {
@@ -32,7 +32,7 @@ const routes: Routes = [
       {
         path: 'pages',
         loadChildren: () =>
-          import('./views/pages/pages.module').then((m) => m.PagesModule)
+          import('./views/extras/pages.module').then((m) => m.PagesModule)
       },
     ]
   },
