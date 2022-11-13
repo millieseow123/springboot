@@ -4,33 +4,99 @@
       <c-col lg="7" md="9" xl="6">
         <c-card class="mx-4">
           <c-card-body class="p-4">
-            <form cForm>
+            <form cForm [formGroup]="form" (ngSubmit)="processRegistration()">
               <h1>Register</h1>
               <p class="text-medium-emphasis">Create your account</p>
               <c-input-group class="mb-3">
                 <span cInputGroupText>
                   <svg cIcon name="cilUser"></svg>
                 </span>
-                <input autoComplete="name" cFormControl placeholder="Username" />
+                <input
+                  autoComplete="name"
+                  cFormControl
+                  placeholder="Username"
+                  formControlName="username"
+                />
               </c-input-group>
               <c-input-group class="mb-3">
                 <span cInputGroupText>@</span>
-                <input autoComplete="email" cFormControl placeholder="Email" />
+                <input
+                  autoComplete="email"
+                  cFormControl
+                  placeholder="Email"
+                  formControlName="email"
+                />
               </c-input-group>
               <c-input-group class="mb-3">
                 <span cInputGroupText>
                   <svg cIcon name="cilLockLocked"></svg>
                 </span>
-                <input autoComplete="new-password" cFormControl placeholder="Password" type="password" />
+                <input
+                  autoComplete="new-password"
+                  cFormControl
+                  placeholder="Password"
+                  type="password"
+                  formControlName="password"
+                  (change)="onPasswordChange()"
+                />
               </c-input-group>
-              <c-input-group class="mb-4">
+              <span *ngIf="confirmPassword.hasError('mismatch')">Passwords do not match.</span>
+              <c-input-group class="mb-3">
                 <span cInputGroupText>
                   <svg cIcon name="cilLockLocked"></svg>
                 </span>
-                <input autoComplete="new-password" cFormControl placeholder="Repeat password" type="password" />
+                <input
+                  autoComplete="new-password"
+                  cFormControl
+                  placeholder="Repeat password"
+                  type="password"
+                  formControlName="confirmPassword"
+                  (change)="onPasswordChange()"
+                />
               </c-input-group>
+              <c-input-group class="mb-3">
+                <span cInputGroupText>
+                  <svg cIcon name="cilStar"></svg>
+                </span>
+                <input
+                  autoComplete="name"
+                  cFormControl
+                  placeholder="First Name"
+                  formControlName="firstName"
+                />
+                <span cInputGroupText>
+                  <svg cIcon name="cilStar"></svg>
+                </span>
+                <input
+                  autoComplete="name"
+                  cFormControl
+                  placeholder="Last Name"
+                  formControlName="lastName"
+                />
+              </c-input-group>
+              <c-input-group class="mb-1"> Profile Picture: </c-input-group>
+              <c-input-group class="mb-3">
+                <input type="file" name="profilePicture" (change)="selectFile($event)" #toUpload />
+              </c-input-group>
+              <div class="imagePreview" *ngIf="imageURL && imageURL !== ''">
+                <img [src]="imageURL" *ngIf="imageURL" width="70">
+                <br>
+              </div>
               <div class="d-grid">
-                <button cButton color="success">Create Account</button>
+                <button
+                  type="submit"
+                  cButton
+                  color="success"
+                  [disabled]="form.invalid"
+                >
+                  Create Account
+                </button>
+              </div>
+              <br />
+              <div class="d-grid">
+                <button cButton color="light" [routerLink]="['/']">
+                  Go Back
+                </button>
               </div>
             </form>
           </c-card-body>

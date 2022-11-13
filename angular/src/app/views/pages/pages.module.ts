@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { PagesRoutingModule } from './pages-routing.module';
 import { RegisterComponent } from './register/register.component';
@@ -16,6 +17,8 @@ import { IconModule } from '@coreui/icons-angular';
     Page500Component
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     CommonModule,
     PagesRoutingModule,
     CardModule,
