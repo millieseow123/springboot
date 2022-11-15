@@ -17,10 +17,10 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { AgmCoreModule } from '@agm/core';
 import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { NavigationComponent } from './navigation.component';
-import { NotesComponent } from './notes.component';
-import { ScheduleComponent } from './schedule.component';
-import { UserComponent } from './user.component';
+import { NavigationComponent } from './navigation/navigation.component';
+import { NotesComponent } from './notes/notes.component';
+import { ScheduleComponent } from './schedule/schedule.component';
+import { UserComponent } from './user/user.component';
 
 // Todo Routing
 import { TodoRoutingModule } from './todo-routing.module';

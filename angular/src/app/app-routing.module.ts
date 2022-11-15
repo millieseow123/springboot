@@ -22,7 +22,7 @@ const routes: Routes = [
       {
         path: 'dashboard',
         loadChildren: () =>
-          import('./views/homepage/dashboard.module').then((m) => m.DashboardModule)
+          import('./views/homepage/homepage.module').then((m) => m.DashboardModule)
       },
       {
         path: 'todo',

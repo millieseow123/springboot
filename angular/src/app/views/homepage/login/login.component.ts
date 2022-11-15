@@ -1,6 +1,8 @@
+import { HttpErrorResponse } from "@angular/common/http";
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, Validators } from "@angular/forms";
 import { FormGroup } from "@angular/forms";
+import { CalendarService } from "src/app/services/calendar.service";
 
 @Component({
   selector: "app-login",
@@ -10,17 +12,24 @@ import { FormGroup } from "@angular/forms";
 export class LoginComponent implements OnInit {
   
   form!: FormGroup;
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private calendarSvc: CalendarService) {}
 
   ngOnInit(): void {
     this.form = this.fb.group({
-      username: this.fb.control<string>("", [Validators.required]),
+      email: this.fb.control<string>("", [Validators.required, Validators.email]),
       password: this.fb.control<string>("", [Validators.required]),
     });
   }
 
   login() {
-    console.log("form", this.form);
-    //send to backend
+    const email = this.form.get('email')?.value;
+    const password = this.form.get('password')?.value;
+    this.calendarSvc.login(email, password)
+    .then(result => {
+      console.info('>>> result: ', result)
+    }).catch(err => {
+      console.log(err);
+      alert("Incorrect email or password. Please try again.")
+    })
   }
 }

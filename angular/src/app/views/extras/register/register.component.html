@@ -8,17 +8,6 @@
               <h1>Register</h1>
               <p class="text-medium-emphasis">Create your account</p>
               <c-input-group class="mb-3">
-                <span cInputGroupText>
-                  <svg cIcon name="cilUser"></svg>
-                </span>
-                <input
-                  autoComplete="name"
-                  cFormControl
-                  placeholder="Username"
-                  formControlName="username"
-                />
-              </c-input-group>
-              <c-input-group class="mb-3">
                 <span cInputGroupText>@</span>
                 <input
                   autoComplete="email"
@@ -56,7 +45,7 @@
               </c-input-group>
               <c-input-group class="mb-3">
                 <span cInputGroupText>
-                  <svg cIcon name="cilStar"></svg>
+                  <svg cIcon name="cilUser"></svg>
                 </span>
                 <input
                   autoComplete="name"
@@ -65,7 +54,7 @@
                   formControlName="firstName"
                 />
                 <span cInputGroupText>
-                  <svg cIcon name="cilStar"></svg>
+                  <svg cIcon name="cilUser"></svg>
                 </span>
                 <input
                   autoComplete="name"
@@ -76,7 +65,7 @@
               </c-input-group>
               <c-input-group class="mb-1"> Profile Picture: </c-input-group>
               <c-input-group class="mb-3">
-                <input type="file" name="profilePicture" (change)="selectFile($event)" #toUpload />
+                <input type="file" formControlName="profilePicture" (change)="selectFile($event)" />
               </c-input-group>
               <div class="imagePreview" *ngIf="imageURL && imageURL !== ''">
                 <img [src]="imageURL" *ngIf="imageURL" width="70">

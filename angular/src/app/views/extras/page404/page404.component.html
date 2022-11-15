@@ -13,9 +13,21 @@
           <span cInputGroupText>
             <svg cIcon name="cilMagnifyingGlass"></svg>
           </span>
-          <input cFormControl placeholder="What are you looking for?" type="text" />
+          <input
+            cFormControl
+            placeholder="What are you looking for?"
+            type="text"
+          />
           <button cButton color="info">Search</button>
         </c-input-group>
+        <br />
+        <c-row>
+          <div class="d-grid">
+            <button cButton class="px-10" color="primary" [routerLink]="['/']">
+              Back Home
+            </button>
+          </div>
+        </c-row>
       </c-col>
     </c-row>
   </c-container>

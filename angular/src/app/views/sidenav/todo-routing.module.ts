@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { UserComponent } from './user.component';
-import { ScheduleComponent } from './schedule.component';
-import { NotesComponent } from './notes.component';
-import { NavigationComponent } from './navigation.component';
+import { UserComponent } from './user/user.component';
+import { ScheduleComponent } from './schedule/schedule.component';
+import { NotesComponent } from './notes/notes.component';
+import { NavigationComponent } from './navigation/navigation.component';
 
 
 const routes: Routes = [

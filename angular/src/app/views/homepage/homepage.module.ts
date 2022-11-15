@@ -17,10 +17,11 @@ import {
 import { IconModule } from '@coreui/icons-angular';
 import { ChartjsModule } from '@coreui/angular-chartjs';
 
-import { DashboardRoutingModule } from './dashboard-routing.module';
-import { DashboardComponent } from './dashboard.component';
+import { DashboardRoutingModule } from './homepage-routing.module';
+import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -41,8 +42,9 @@ import { LoginComponent } from './login/login.component';
     ChartjsModule,
     AvatarModule,
     TableModule,
+    HttpClientModule,
   ],
-  declarations: [DashboardComponent, AboutComponent, LoginComponent]
+  declarations: [HomeComponent, AboutComponent, LoginComponent]
 })
 export class DashboardModule {
 }
