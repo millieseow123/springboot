@@ -1,0 +1,97 @@
+{
+  "configVersion": 1,
+  "timestamp": 1668531552599,
+  "index": "/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/273.d4b45d5331a53477.js",
+        "/440.55962691a665edaf.js",
+        "/503.57b41aa507d8cf1f.js",
+        "/index.html",
+        "/main.7c2eae6c6085a6c0.css",
+        "/main.a2986284e626c14c.js",
+        "/manifest.webmanifest",
+        "/polyfills.31afe34a2e70eeaa.js",
+        "/runtime.bf3cc7ba38eb2f5b.js",
+        "/styles.b24e4c0f3f1e1974.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/assets/angular.ico",
+        "/assets/images/home-page-bg.jpeg",
+        "/assets/images/icon-calendar.png",
+        "/assets/img/avatars/1.jpg",
+        "/assets/img/avatars/2.jpg",
+        "/assets/img/avatars/3.jpg",
+        "/assets/img/avatars/4.jpg",
+        "/assets/img/avatars/5.jpg",
+        "/assets/img/avatars/6.jpg",
+        "/assets/img/avatars/7.jpg",
+        "/assets/img/avatars/8.jpg",
+        "/assets/img/avatars/9.jpg",
+        "/assets/img/brand/schedulo-logo.png"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/273.d4b45d5331a53477.js": "414fbcfacf134528602eb7bab5d2c2eb1c14bbef",
+    "/440.55962691a665edaf.js": "f0e2205aca154565b8511eaf9fbe44197f200bd5",
+    "/503.57b41aa507d8cf1f.js": "b3dae270fa8a074e977f4f66a3b19523b3db77bc",
+    "/assets/angular.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/assets/images/home-page-bg.jpeg": "5fe47808544207a6282067b285c0241a150ed56c",
+    "/assets/images/icon-calendar.png": "5e73209bdd3a79c1942d1c59724283e9a31eddeb",
+    "/assets/img/avatars/1.jpg": "c63395f874003b10fcd9cbf781fa0ad95f6e0c2d",
+    "/assets/img/avatars/2.jpg": "fa36f73b802882ec05f2de93625e455643600961",
+    "/assets/img/avatars/3.jpg": "aed4ebdd5c6a2826699b74f76d71fbe9d64120ea",
+    "/assets/img/avatars/4.jpg": "d3269c37a6a3205227a47146355fe43fce90e2e1",
+    "/assets/img/avatars/5.jpg": "75de18738bb23aae66399ec1bfacee9aa747372a",
+    "/assets/img/avatars/6.jpg": "4ec791284eb69db6d2c6e7af34cbd66b06b55040",
+    "/assets/img/avatars/7.jpg": "d6f1e3988c33e750c026c32d3a2aea36430638dc",
+    "/assets/img/avatars/8.jpg": "30afc389aca06c2be7ae2ff499f2c2c4e28abaa6",
+    "/assets/img/avatars/9.jpg": "9832b9d39d0be24797df99e8e588e097ed831cd5",
+    "/assets/img/brand/schedulo-logo.png": "bf25dfe092e9018703f90e0d90a4fae048570e1f",
+    "/index.html": "bc8c771bd5bce3ae28bf104f9c93c3b4eca6aad7",
+    "/main.7c2eae6c6085a6c0.css": "a7e122320700bbdd90be1a47e6b778cf4ee1aad6",
+    "/main.a2986284e626c14c.js": "f9a89bed7e164693248e382ddb6d9da227f47f5c",
+    "/manifest.webmanifest": "2b0a3d25e2f60ed1631916ade8cb62f1dda17738",
+    "/polyfills.31afe34a2e70eeaa.js": "b9c9e67c1fa539de9323eeed588f5319c39b7b0d",
+    "/runtime.bf3cc7ba38eb2f5b.js": "74ffc763cd2705400e2b4d5f6f5f5c7c3150624b",
+    "/styles.b24e4c0f3f1e1974.css": "e710c2c9a2f727174eba1accbfda59c1cffaf77a"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
