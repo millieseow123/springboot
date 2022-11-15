@@ -31,7 +31,7 @@ public class RegistrationRestController {
     public ResponseEntity<String> newUser(@RequestPart String email, 
     @RequestPart String password, @RequestPart String firstName, 
     @RequestPart String lastName) throws UserException {
-
+        System.out.println("TESTING");
         User user = new User();
         user.setEmail(email);
         user.setPassword(password);
